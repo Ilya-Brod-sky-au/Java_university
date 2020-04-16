@@ -13,11 +13,11 @@ public class Player implements Runnable {
     public synchronized void turn() throws InterruptedException {
         if (queue == 0) {
             queue = 1;
-            System.out.println("Ping 1");
+            System.out.println("Ping");
         }
         else if (queue == 1) {
-            queue = 2;
-            System.out.println("Pong 2");
+            queue = 0;
+            System.out.println("Pong");
         };
         sleep(100);
     }
